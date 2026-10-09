@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CodeQR</title>
-    <meta name="description" content="Crie Codes para links, textos, WI-FI, contactos e muito mais de forma rápida e segura gratuitamente">
+
+    <meta
+        name="description"
+        content="Crie QR Codes para links, textos, WI-FI, contactos e muito mais de forma rápida e segura gratuitamente"
+    >
+
     <link rel="shortcut icon" href="assets/icone.png" type="image/x-icon">
 
     <link rel="stylesheet" href="css/style.css">
@@ -12,102 +18,207 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
-  
-    <!--CABEÇAÇLHO-->
+
+    <!-- CABEÇALHO -->
 
     <header id="header">
-        <div class="logo">
-<img src="assets/icone.png" alt="logotipo">
 
-<h1>
-    <span class="code">Code</span>
-     <span class="qr">QR</span>
-</h1>
+        <div class="logo">
+
+            <img src="assets/icone.png" alt="logotipo">
+
+            <h1>
+                <span class="code">Code</span>
+                <span class="qr">QR</span>
+            </h1>
+
         </div>
 
-        <a href="html/create.html" class="btn-primary">
+        <div id="language-selector">
+
+            <button id="btnPT">Português</button>
+            <button id="btnEN">English</button>
+
+        </div>
+
+        <a
+            href="html/create.html"
+            class="btn-primary"
+            id="qrforfree"
+        >
             Criar QR Gratuitamente
         </a>
+
     </header>
 
-    <!--Corpo Do Code QR-->
+
+    <!-- CORPO DO CODE QR -->
+
     <main>
 
+        <!-- HERO -->
+
         <section id="hero">
-            
-            <h2> Crie QR Codes em segundos.</h2>
+
+            <h2 id="qrsecond">
+                Crie QR Codes em segundos.
+            </h2>
 
             <div class="slider">
-                <p id="slider-text">Crie QR Codes sem criar uma conta.</p>
+
+                <p id="slider-text">
+                    Crie QR Codes sem criar uma conta.
+                </p>
 
                 <div class="slider-dots">
 
-<span class="active" data-slide="0"></span> 
-<span data-slide="1"></span>
-<span data-slide="2"></span>
+                    <span class="active" data-slide="0"></span>
+
+                    <span data-slide="1"></span>
+
+                    <span data-slide="2"></span>
 
                 </div>
+
             </div>
 
-            <a href="html/create.html" class="btn-primary">
+            <a
+                href="html/create.html"
+                class="btn-primary"
+                id="qrforfree2"
+            >
                 Criar QR Gratuitamente
             </a>
+
         </section>
 
-        <!--Como Funciona-->
+
+        <!-- COMO FUNCIONA -->
 
         <section id="how-it-works">
-            <h2>Como Funciona?</h2>
+
+            <h2 id="howItWorks">
+                Como Funciona?
+            </h2>
 
             <div class="cards">
+
                 <article class="card">
+
                     <h3>1</h3>
-                    <p>Escolha o tipo de QR Code.</p>
+
+                    <p id="step1">
+                        Escolha o tipo de QR Code.
+                    </p>
+
                 </article>
 
+
                 <article class="card">
+
                     <h3>2</h3>
-                    <p>Preencha as informações.</p>
+
+                    <p id="step2">
+                        Preencha as informações.
+                    </p>
+
                 </article>
+
 
                 <article class="card">
+
                     <h3>3</h3>
-                    <p>Baixe seu QR Code.</p>
+
+                    <p id="step3">
+                        Baixe seu QR Code.
+                    </p>
+
                 </article>
+
             </div>
+
         </section>
 
-        <!--VANTAGENS-->
+
+        <!-- VANTAGENS -->
+
         <section id="advantages">
-            <h2>Por que escolher o Code QR?</h2>
+
+            <h2 id="whyCodeQR">
+                Por que escolher o Code QR?
+            </h2>
+
             <div class="cards"></div>
+
+
             <article class="card">
-                <h3>Rápido.</h3>
-            <p>Crie QR Codes em poucos segundos.</p>
+
+                <h3 id="fast">
+                    Rápido.
+                </h3>
+
+                <p id="fastDescription">
+                    Crie QR Codes em poucos segundos.
+                </p>
+
             </article>
 
-             <article class="card">
-                <h3>Seguro.</h3>
-            <p>Sem necessidade de criar conta.</p>
+
+            <article class="card">
+
+                <h3 id="safe">
+                    Seguro.
+                </h3>
+
+                <p id="safeDescription">
+                    Sem necessidade de criar conta.
+                </p>
+
             </article>
 
-             <article class="card">
-                <h3>Simples.</h3>
-            <p>Interface limpa e fácil de usar.</p>
+
+            <article class="card">
+
+                <h3 id="simple">
+                    Simples.
+                </h3>
+
+                <p id="simpleDescription">
+                    Interface limpa e fácil de usar.
+                </p>
+
             </article>
 
-            
         </section>
+
     </main>
 
-    <!--FOOTER-->
+
+    <!-- FOOTER -->
+
     <footer id="footer">
-        <p>&copy;2026 Code QR</p>
-        <p>Versão v1.0</p>
-        <p>Feito em Angola</p>
+
+        <p>
+            &copy;2026 Code QR
+        </p>
+
+        <p id="version">
+            Versão v1.0
+        </p>
+
+        <p id="madeInAngola">
+            Feito em Angola
+        </p>
+
     </footer>
 
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/language-home.js"></script>
     <script src="js/app.js"></script>
+
 </body>
 </html>
