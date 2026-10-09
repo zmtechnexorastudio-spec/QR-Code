@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Raiz Das Cores*/
+:root{
+    --primary:#2563EB;
+    --secondary:#10B981;
+    --dark:#1F2937;
+    --light:#FFFFFF;
+    --gray:#6B7280;
+    --background:#F5F7FA;
+    --radius:12px;
+    --transition:0.3s;
+}
+
+/*Estilizacao Do Corpo*/
+body{
+    font-family:"Poppins",sans-serif;
+    background: var(--background);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/*Links*/
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Imagens*/
+img{
+    max-width: 100%;
+    display: block;
+}
+
+/*Botoes*/
+
+button{
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+    font-family: inherit;
+    background-color:#6B7280;
+    border-radius: 7px;
+    padding: 10px;
+    margin-bottom: 9px;
+
+}
+button:hover{
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    background-color:#F5F7FA;
+    color: #1c1c1d;
+    border-radius: 7px;
+    padding: 10px;
+
+}
+
+/*Inputs*/
+input{
+    font-family: inherit;
+    outline: none;
+}
+
+/*Listas*/
+ul{
+    list-style: none;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}

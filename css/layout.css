@@ -1,0 +1,100 @@
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/*Cabecalho*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+/*Logotipo*/
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/*Conteudo Principal*/
+main{
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/*Seccao HERO*/
+#hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 25px;
+    min-height: 70vh;
+}
+
+
+/*Como Funciona*/
+#how-it-works{
+    margin: 80px;
+}
+
+/*Vantagens*/
+#advantage{
+    margin-top: 80px;
+}
+
+/*Cards*/
+.cards{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/*Create.HTML*/
+#qr-types{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/*Area principal da area de criacao de codigo qr*/
+#create-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/*Coluna Esquerda*/
+.left-column{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/*Coluna direita*/
+.right-column{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+/*Rodape*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    margin-top: 60px;
+}

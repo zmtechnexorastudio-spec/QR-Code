@@ -1,0 +1,65 @@
+/*Tablets*/ 
+@media (max-width:992px){
+    header{
+        padding: 20px;
+    }
+    main{
+        width: 95%;
+    }
+    #create-layout{
+        grid-template-columns: 1fr;
+    }
+    footer{
+        flex-direction:column ;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+/*Telemoveis*/
+@media (max-width:768px){
+    header{
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    #hero{
+        min-height: auto;
+        padding: 40px 0;
+    }
+    h1{
+        font-size: 28px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    .cards{
+        grid-template-columns: 1fr;
+    }
+    #qr-types{
+        grid-template-columns: 1fr 1fr;
+    }
+    #download{
+        flex-direction: column;
+    }
+    #qr-preview{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/*Telemoveis pequenos*/
+@media (max-width:480px){
+    #qr-types{
+        grid-template-columns: 1fr;
+    }
+    .btn-primary,
+    .btn-secondary,
+    button{
+        width: 100%;
+    }
+    #qr-preview{
+        width: 200px;
+        height: 200px;
+    }
+}
