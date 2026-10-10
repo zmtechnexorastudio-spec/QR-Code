@@ -27,7 +27,16 @@ function obterCanvasQR() {
     return canvas;
 }
 
-// Descarrega um ficheiro Blob
+// Regista o descarregamento no Google Analytics
+function registarDescarregamento(formato) {
+    if (typeof gtag === "function") {
+        gtag("event", `qr_code_download_${formato}`, {
+            file_format: formato.toUpperCase()
+        });
+    }
+}
+
+// Descarrega um ficheiro
 function descarregarFicheiro(blob, nome) {
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
@@ -59,19 +68,20 @@ function converterImagem(canvas, formato, qualidade) {
     });
 }
 
-// PNG
+// Descarregamento PNG
 btnPNG.addEventListener("click", async () => {
     try {
         const canvas = obterCanvasQR();
         const blob = await converterImagem(canvas, "image/png");
 
         descarregarFicheiro(blob, "QRCode.png");
+        registarDescarregamento("png");
     } catch (erro) {
         alert(erro.message || "Não foi possível descarregar o PNG.");
     }
 });
 
-// JPG
+// Descarregamento JPG
 btnJPG.addEventListener("click", async () => {
     try {
         const original = obterCanvasQR();
@@ -93,12 +103,13 @@ btnJPG.addEventListener("click", async () => {
         );
 
         descarregarFicheiro(blob, "QRCode.jpg");
+        registarDescarregamento("jpg");
     } catch (erro) {
         alert(erro.message || "Não foi possível descarregar o JPG.");
     }
 });
 
-// PDF
+// Descarregamento PDF
 btnPDF.addEventListener("click", () => {
     try {
         const canvas = obterCanvasQR();
@@ -122,6 +133,7 @@ btnPDF.addEventListener("click", () => {
         );
 
         pdf.save("QRCode.pdf");
+        registarDescarregamento("pdf");
     } catch (erro) {
         alert(erro.message || "Não foi possível criar o PDF.");
     }
